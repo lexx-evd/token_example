@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package Ord;
+
+message TCreative {
+    message TCreativeData {
+        repeated string MediaUrl = 1 [json_name="mediaUrl"];
+        repeated string TextData = 2 [json_name="textData"];
+        repeated string TargetingRegion = 3 [json_name="targetingRegion"];
+    }
+
+    optional string ExternalCampaignId = 1 [json_name="externalCampaignId"];
+    optional string ExternalId = 2 [json_name="externalId"];
+    optional string Type = 3 [json_name="type"];
+    optional string Url = 4 [json_name="url"];
+    optional string Category = 5 [json_name="category"];
+    optional TCreativeData CreativeData = 6 [json_name="creativeData"];
+}

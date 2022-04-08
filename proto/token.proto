@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package Ord;
+
+message TToken {
+    // стараемся использовать числовые типы даных, чтобы в сериализованном виде токен занимал меньше места
+    uint64 Hash = 1;
+    uint64 ExternalCampaignId = 2;
+    uint64 ExternalId = 3;
+    optional uint64 Time = 4;  // время комита в базу ОРД
+    optional string SomeOtherDataIfThereIsANeed = 100;
+}

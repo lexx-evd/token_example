@@ -67,3 +67,12 @@ import proto.token_pb2 as token_pb2
 token = re.search('(?:https://)?\w+\.yandex\.ru/count/[\w\d\-~]+/(\S+)', direct_count_url).groups()[0]
 token_decoded = token_pb2.TToken.FromString(base64.b64decode(token))
 print(f"Содержимое расшифрованнго токена из креатива директа:\n{MessageToJson(token_decoded)}\n")
+'''
+Содержимое расшифрованнго токена из креатива директа:
+{
+  "Hash": "3956600690",
+  "ExternalCampaignId": "96418400",
+  "ExternalId": "72057605541342984",
+  "Time": "1639759042000"
+}
+'''

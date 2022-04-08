@@ -64,7 +64,7 @@ import re
 import base64
 import proto.token_pb2 as token_pb2
 
-token = re.search('(?:https://)?\w+\.yandex\.ru/count/[\w\d\-~]+/(\S+)', direct_count_url).groups()[0]
+token = re.search('(?:https://)?\w+\.yandex\.ru/count/[\w\d\-~]+/(\S+)', direct_count_url).group(1)
 token_decoded = token_pb2.TToken.FromString(base64.b64decode(token))
 print(f"Содержимое расшифрованнго токена из креатива директа:\n{MessageToJson(token_decoded)}\n")
 '''
